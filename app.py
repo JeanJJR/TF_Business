@@ -8,6 +8,7 @@ import joblib
 # =========================
 st.set_page_config(page_title="Sistema de Predicción Cardíaca", layout="centered")
 st.title("Sistema de Predicción de Riesgo de Ataque Cardíaco")
+st.write("Aplicación desarrollada como entorno productivo controlado")
 
 # =========================
 # Cargar modelo y escalador
@@ -144,4 +145,5 @@ if st.button("Realizar predicción"):
     else:
         st.success(" Estado NORMAL del paciente")
     st.subheader("Probabilidad")
+
     st.write(f"Probabilidad de riesgo: {prob[0][1]:.2%}")
